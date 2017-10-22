@@ -1,10 +1,12 @@
-//function that takes a number >=1 and returns a set of all prime factors
-
-//create function and take a number
+//Notes: works but not necessarily 'fast', over 11 digits it gets pretty slow,
+//I didn't let the full routine run out at 1 trillion but it was taking longer than
+//a minute.  I'd like to optimize this for speed, but I have and exam next week I need to
+//study for and this took me much longer than they'd give me in a job interview. 
+//Good challenge though, I laughed, I cried, and I learned a little something.
 
 function getPrimeFactors(n){
 
-	if (Number.isInteger(n)){
+	if (Number.isInteger(n) && n >= 1){
 
 		var primeFactors = new Set();
 
@@ -28,8 +30,8 @@ function getPrimeFactors(n){
 
 				for(x=3;x<=Math.floor(Math.sqrt(num));x+=2){ //skip even numbers
 
-				// the square root primality comes from research not my own genius originally it was just num before
-				// I did some research to optimize I dont remember or enough math to code an elliptic curve primality
+				// the square root primality comes from research not my own genius originally it was just 'num' before
+				// I did some research to optimize but I dont remember or know enough math to code an elliptic curve primality
 				// test here before the deadline
 
 					if (num%x === 0){
@@ -46,9 +48,9 @@ function getPrimeFactors(n){
 
 		function pullFactors(){
 
-			//props to matthew little for encouraging me to revisit my loop here
+			//props to matthew little for advising me to revisit my loop here
 			//I originally wrote a recursive 'if' loop that worked but exceeded the stack call
-			//when the number arguement was 6 figures.  I thought the recursion would have
+			//when the number argument was 6 figures.  I thought the recursion would have
 			//advantages over a for loop but it turns out I was out of my depth
 			//and the loop was poorly written.  I converted it to for loop for this 
 			//final version.
@@ -94,6 +96,6 @@ function getPrimeFactors(n){
 
 	} else {
 
-		return "this function only accepts integers";
+		return "this function only accepts positive integers";
 	}
 }
