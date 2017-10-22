@@ -49,7 +49,7 @@ function getPrimeFactors(n){
 		function pullFactors(){
 
 			//props to matthew little for advising me to revisit my loop here
-			//I originally wrote a recursive 'if' loop that worked but exceeded the stack call
+			//I originally wrote a recursive 'if' loop that 'worked' (caveat emptor) but exceeded the stack call
 			//when the number argument was 6 figures.  I thought the recursion would have
 			//advantages over a for loop but it turns out I was out of my depth
 			//and the loop was poorly written.  I converted it to for loop for this 
