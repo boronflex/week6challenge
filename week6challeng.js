@@ -3,6 +3,7 @@
 //a minute.  I'd like to optimize this for speed, but I have and exam next week I need to
 //study for and this took me much longer than they'd give me in a job interview. 
 //Good challenge though, I laughed, I cried, and I learned a little something.
+//Here are some more comments to get the pull request to work maybe.
 
 function getPrimeFactors(n){
 
